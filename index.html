@@ -142,7 +142,7 @@ function renderQuestion(idx) {
   document.getElementById('series-badge').textContent = q.series + ' seriya';
   document.getElementById('q-counter').textContent = (idx+1) + ' / 60';
   var btnsDiv = document.getElementById('answer-btns');
-  var numOpts = ['C','D','E'].indexOf(q.series) >= 0 ? 8 : 6;
+  var numOpts = q.series==='A'?6:8;
   btnsDiv.innerHTML = '';
   btnsDiv.style.gridTemplateColumns = numOpts === 8 ? 'repeat(4, 1fr)' : 'repeat(3, 1fr)';
   for (var i = 1; i <= numOpts; i++) {
